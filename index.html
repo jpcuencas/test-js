@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>  
+  <meta charset="utf-8">
+  <title>Test Suite</title>
+  <!--<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.18.0.css">-->
+  <link rel="stylesheet" href="./libs/qunit-2.18.0.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <!--<script src="https://code.jquery.com/qunit/qunit-2.18.0.js"></script>-->
+  <script src="./libs/qunit-2.18.0.js"></script>
+  
+  <!-- Source code -->
+  <script src="./src/MyLib.js"></script>
+  <script src="./src/example.js"></script>
+  
+  <!-- Tests -->
+  <script src="./test/General.test.js"></script>
+  <script src="./test/MyLib.test.js"></script>
+  <script src="./test/example.test.js"></script>
+  <script>
+   function add(a, b) {
+    return a + b;
+  }
+
+  QUnit.module('add', function() {
+    QUnit.test('two numbers', function(assert) {
+      assert.equal(add(1, 2), 3);
+    });
+  });
+  </script>
+</body>
